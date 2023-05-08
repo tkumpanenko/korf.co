@@ -1,0 +1,15 @@
+---
+layout: page
+title: Contact
+permalink: "/contact/"
+---
+<section class="links feed-links">
+  {% for link in site.data.feeds.info  %}
+  <h5>Contact</h5>
+  <div class="link-item">
+    <a href="{{link.url}}" target="_blank"><i class="fa fa-lg fa-{{link.icon}} "></i> {{link.text}}</a>
+  </div>
+  {% endfor %}
+</section>
+
+{% include follow.html %}

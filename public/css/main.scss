@@ -1,0 +1,324 @@
+---
+---
+@import "_variables";
+@import "_poole";
+@import "_hyde";
+@import "_font";
+@import "_animation";
+
+body {
+  font-weight: 300;
+}
+
+.page img {
+  display: inline-block;
+}
+
+.page-title {
+  margin-bottom: 1em;
+}
+
+.sidebar-about {
+  h1 {
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-bottom: 0;
+    a:hover {
+      text-decoration: none;
+    }
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  .lead {
+    font-size: 0.75rem;
+  }
+}
+
+.sidebar-nav {
+  ul {
+    margin: 0;
+    padding: 0; 
+  }
+  li {
+    display: block;
+  }
+  a {
+    display: inline-block;
+    color: rgba(#fff, 0.8);
+    font-weight: 300;
+    &.active,
+    &:hover,
+    &:focus {
+      font-weight: 300;
+      text-decoration: none!important;
+      color: rgba(#fff, 1);
+
+    } 
+  }
+}
+
+.sidebar {
+  background: $sidebar-bg;
+}
+
+@media (min-width: 48em) {
+  .sidebar {
+    width: 13rem;
+  }
+  .sidebar-nav {
+    a {
+      color: $sidebar-link;
+    }
+  }
+  .sidebar-nav-item {
+    font-size: 1rem;
+    border-bottom: 2px solid transparent;
+    line-height: 1.5;
+  }
+  .sidebar-sticky {
+    position: absolute;
+    right: 0rem;
+    bottom: auto;
+    left: 0rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.blog-before {
+  font-size: 0.9rem;
+  margin-bottom: 2.5rem;
+} 
+
+.pagination {
+  font-size: .75rem;
+  .page-number {
+      margin: 0 2rem;
+  }
+} 
+
+.post {
+  margin-top: 1.5em;
+  margin-bottom: 0; 
+  margin-bottom: 1em;
+    .post-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5em;
+      color: $content-link-color;
+      a {
+        color: $content-link-color;
+      }
+    }
+    .post-date {
+      font-size: 1rem;
+      color: rgba($content-link-color, 0.25);
+      span {
+        display: block;
+      }
+    }
+}
+
+.sub-menu {
+  a:before {
+    display: inline-block;
+    margin: 0 5px;
+    content: '-';
+  }
+}
+
+.related {
+  border-top: none;
+  .post  {
+    border-bottom: 0;
+    margin: 0;
+  }
+  .post-title {
+    font-size: 1rem;
+    margin: 0;
+    padding: 5px 0; 
+  }
+}
+
+@media (min-width: 48em) {
+  .content {
+      margin-left: 12rem;
+      margin-right: 2rem;
+  }
+}
+@media (min-width: 75em) {
+  .content {
+      margin-left: 8rem;
+      margin-right: 2rem;
+  }
+  .layout-reverse .content {
+      margin-left: 2rem;
+      margin-right: 17rem;
+  }
+}
+@media (min-width: 70em) and (orientation: landscape) {
+  .page {
+    max-width: 38rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .content {
+    max-width: 100%;
+  }
+  .layout-reverse .content {
+      margin-left: 8.5rem;
+      margin-right: 22.5rem;
+  }
+}
+
+.content {
+  font-size: 1rem;
+  h1, h2, h3,
+  h4, h5, h6 {
+    color: $h1-color;
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+  h1 {
+    font-size: 1.35rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  h3 {
+    font-size: 1.15rem;
+  }
+  h4 {
+    font-size: 1.05rem;
+  }
+  h5, h6 {
+    font-size: 1rem;
+  }
+}
+
+body {
+  background: $content-bg;
+  color: $content-color;
+  font-size: 20px;
+  strong {
+    color: $content-color;
+  }
+  .page-title,
+  h1, h2, h3,
+  h4, h5, h6 {
+    color: $h1-color;
+    text-transform: uppercase;
+  }
+  a {
+    color: $content-link-color;
+  }
+}
+
+.links {
+  $padding: 10px;
+  border-top: 1px solid $border-color;
+
+  position: relative;
+  
+  h5 {
+    font-weight: 400;
+    padding: #{$padding} 0;
+    margin: 0;
+    color: #fff;
+    @media (min-width: 480px) {
+      max-width: 250px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: #{$padding};
+      border-top: 1px solid $content-link-color;
+
+    }
+    @media (min-width: 768px) {
+      max-width: 300px
+    }
+
+  }
+  .link-item {
+    border-top: 1px solid $border-color;
+    padding: #{$padding} 0;
+    h6 {
+      margin: 0;
+    }
+    @media (min-width: 480px) {
+      margin-left: 250px;
+      &:first-of-type {
+        border-top: none;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    @media (min-width: 1024px) {
+      margin-left: 300px;
+
+    }
+  }
+}
+
+.feed-links {
+  margin-bottom: 30px;
+  .link-item {
+    position: relative;
+    padding-left: 30px;
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.project-thumb {
+  margin-top: 25px;
+  &__description {
+    margin-top: 10px;
+  }
+}
+
+.owl-nav {
+  .owl-prev,
+  .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    transition: 0.3s all;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  } 
+  .owl-prev {
+    right: 0;
+  }
+  .owl-next {
+    left: 0;
+  }
+  @media (min-width: 48em) {
+    .owl-prev {
+      transform: translateX(150%);
+    }
+    .owl-next {
+      transform: translateX(-150%);
+    }
+    
+  }
+
+}
+
+.about-image-wrapper {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 200px;
+  display: block;
+  margin: 30px auto;
+}

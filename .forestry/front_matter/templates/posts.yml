@@ -1,0 +1,22 @@
+---
+pages:
+- _posts/2017-06-15-new-site-and-journal.md
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  default: ''
+  label: Title
+  name: title
+  config:
+    required: true
+- type: datetime
+  name: date
+  label: Date
+  config:
+    date_format: MM/DD/YYYY
+  hidden: true
+- type: text
+  default: post
+  name: layout
+  label: layout

@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile /nfs/c01/h04/mnt/9550/domains/korf.co/html/work/.htpasswd
+Require valid-user

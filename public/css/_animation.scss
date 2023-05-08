@@ -1,0 +1,123 @@
+$w: 250px;
+$h: 250px;
+$d: 9s;
+$delay: $d/3;
+
+@mixin animate-label($val1, $val2) {
+  0% {
+    opacity: $val1; 
+  }
+  20% {
+    opacity: $val2;
+  }
+  80% {
+    opacity: $val2;
+  }
+  100% {
+    opacity: $val1;
+  }
+}
+
+@mixin animate-circle($val1, $val2) {
+  0% {
+    transform: translate($val1, $val2);
+  }
+  33.3% {
+    transform: translate(0,0);
+  }
+  66.6% {
+    transform: translate(0,0);
+  }
+  100% {
+    transform: translate($val1, $val2);
+  }
+}
+
+.box {
+  height: $h;
+  width: $w;
+  margin: 100px auto;
+  position: relative;
+}
+
+.box {
+  .box-title {
+    position: absolute;
+    color: #000;
+    top: 50%;
+    display: block;
+    opacity: 0;
+    left: 50%;
+    line-height: 1;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.1rem;
+    animation: show-main-label $d ease-in-out $delay 1;
+  }
+  [class^='c'] {
+    background-color: #0ff;
+    border-radius: 50%;
+    height: $h;
+
+    width: $w;
+    mix-blend-mode: color-dodge;
+    position: absolute;
+    span {
+      position: absolute;
+      color: rgba(#fff, 0.7);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: hide-label $d ease-in-out $delay 1;
+    }
+  }
+  .circle1 {
+    transform: translate(-25%, -25%);
+    background-color: rgba(0,255,255,0.25);
+    animation: c1 $d ease-in-out $delay 1;
+    span {
+      transform: translate(-$h/3, -50%);
+    }
+  }
+
+  .circle2 {
+    transform: translate(0, 25%);
+    background-color: rgba(255,255,0,0.25);
+    animation: c2 $d ease-in-out $delay 1;
+    span {
+      transform: translate(-50%, #{$h/10});
+    }
+  }
+
+  .circle3 {
+    transform: translate(25%, -25%);
+    background-color: rgba(255,0,255,0.25);
+    animation: c3 $d ease-in-out $delay 1;
+    span {
+      left: auto;
+      right: 50%;
+      transform: translate($h/3, -50%);
+    }
+  }
+}
+
+@keyframes hide-label {
+  @include animate-label(1, 0);
+}
+
+@keyframes show-main-label {
+  @include animate-label(0, 1);
+}
+
+@keyframes c1 {
+  @include animate-circle(-25%, -25%);
+}
+
+@keyframes c2 {
+  @include animate-circle(0%, 25%);
+}
+
+@keyframes c3 {
+  @include animate-circle(25%, -25%);
+}

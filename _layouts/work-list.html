@@ -1,0 +1,14 @@
+---
+layout: page
+---
+
+{{ content }}
+
+<section class="links">
+  <h5>Work</h5>
+  {% for item in site.work %}
+  <div class="link-item">
+    <a href="{{item.url}}">{{item.title}}</a> <br />
+  </div>
+  {% endfor %}
+</section>

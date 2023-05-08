@@ -1,0 +1,17 @@
+---
+layout: page
+---
+
+{{ content }}
+
+<!-- rendering links from  -->
+{% for section in site.data.links %}
+<section class="links">
+  <h5>{{section.header}}</h5>
+  {% for link in section.links %}
+  <div class="link-item">
+    <a href="{{link.href}}" target="_blank">{{link.text}}</a> <br />
+  </div>
+  {% endfor %}
+</section>
+{% endfor %}

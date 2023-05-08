@@ -1,0 +1,24 @@
+---
+social:
+- text: Twitter
+  url: http://twitter.com/andrewkorf/
+  icon: twitter
+- text: LinkedIn
+  url: http://www.linkedin.com/in/andrewkorf
+  icon: linkedin
+- text: Instagram
+  url: http://instagram.com/korf
+  icon: instagram
+info:
+- text: 612.669.5398 (sms/mms welcomed)
+  icon: phone
+  url: tel:6126695398
+- text: andrew@korf.co
+  icon: envelope
+  url: mailto:andrew@korf.co
+- text: AndrewKorf
+  icon: skype
+  url: skype:AndrewKorf?call
+- text: vCard Download
+  url: "/assets/andrew-korf.vcf"
+  icon: arrow-circle-down

@@ -1,0 +1,49 @@
+---
+pages:
+- _work/subaru-digital-strategy.html
+- _work/american-express.html
+- _work/staywell-wellness-program-service-design.html
+- _work/rfp-live-design.html
+- _work/games-management-platform.html
+- _work/mayo-clinic-portal.html
+- _work/fanchatter-redesign.html
+hide_body: false
+is_partial: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: role
+  label: Role
+  type: text
+  hidden: false
+  default: ''
+- name: artifacts
+  label: Artifacts
+  type: text
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: true
+  default: 2017-07-14 20:58:58 +0000
+- name: layout
+  label: Layout
+  type: text
+  hidden: true
+  default: work
+- type: field_group_list
+  name: assets
+  label: Thumbnails
+  fields:
+  - type: file
+    name: image
+    label: image
+  - type: textarea
+    name: image_description
+    label: Description
+  config:
+    labelField: image_description

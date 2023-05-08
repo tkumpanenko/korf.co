@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:4.0
+PRODID:-//korf.co//(BETA)//EN
+N:Korf;Andrew;;;
+FN:Andrew Korf
+ORG:Korf Co.
+URL:http://www.korf.co
+TITLE:Research, Strategy, Design
+PHOTO;MEDIATYPE=image/jpg:http://www.korf.co/images/avatar_andrew.jpg
+TEL;TYPE=work,voice;VALUE=uri:tel:+1-612-669-5398
+TEL;TYPE=home,voice;VALUE=uri:tel:+1-612-669-5398
+ADR;TYPE=work;LABEL="1317 3rd St NE\Minneapolis, MN 55413\United States of America"
+  :;;1317 3rd St NE;Minneapolis;MN;55413;United States of America
+EMAIL:andrew@korf.co
+REV:20120222T093703Z
+END:VCARD

@@ -1,0 +1,23 @@
+---
+about:
+- identifier: links
+  url: "/links/"
+  weight: 2
+  title: Links
+main:
+- identifier: blog
+  url: "/journal/"
+  weight: 3
+  title: Journal
+- identifier: contact
+  url: "/contact/"
+  weight: 5
+  title: Contact
+- identifier: about
+  url: "/about/"
+  weight: 2
+  title: About
+- identifier: home
+  url: "/"
+  weight: 1
+  title: Home

@@ -1,0 +1,27 @@
+<ul>
+  {% for item in menu | sort: 'weight' %}
+    <li>
+      <span>
+        <!-- detect if is post page -->
+        {% assign journal_active = false %}
+        {% if page.layout == 'post' %}
+          {% if item.url == '/journal/' %}
+            {% assign journal_active = true %}
+          {% endif %}
+        {% endif %}
+        <!-- detect if is post page -->
+        <a class="sidebar-nav-item {% if page.url == item.url or journal_active  %} active {% endif %}" href="{{ item.url }}">
+          {{ item.title }}
+        </a>
+      </span>
+      {% if page.url == item.url or page.url == '/links/' %} 
+        {% if item.children %}
+          <ul class="sub-menu">
+            {% assign menu = item.children %}
+            {% include menus.html %}
+          </ul>
+        {% endif %}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

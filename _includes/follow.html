@@ -1,0 +1,8 @@
+<section class="links feed-links">
+  <h5>Follow me</h5>
+  {% for link in site.data.feeds.social  %}
+  <div class="link-item">
+    <a href="{{link.url}}" target="_blank"><i class="fa fa-lg fa-{{link.icon}} "></i> {{link.text}}</a>
+  </div>
+  {% endfor %}
+</section>

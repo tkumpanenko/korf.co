@@ -1,0 +1,45 @@
+# Setup
+title:            'Andrew Korf'
+description:      'Research, Strategy &amp; Design'
+url:              'http://korf.co'
+baseurl:          /
+
+author:
+  name:           'Andrew Korf'
+  url:            http://www.twitter.com/andrewkorf
+
+paginate: 5
+paginate_path: '/journal/:num/'
+
+sass:
+  sass_dir:       public/css
+  style:          compressed
+
+# Gems
+plugins:             
+  - jekyll-paginate
+  - redcarpet
+  - jekyll-menus
+  # - octopress-minify-html
+
+timezone:         '-0800'
+
+include:          ['.htaccess', '.htpasswd']
+exclude:          ['old_site_backup.zip'] 
+html_press:
+  unquoted_attributes: false
+  drop_empty_values: true
+  strip_crlf: false
+
+future: true
+
+collections:
+  work:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: work
+    values:
+      layout: work
